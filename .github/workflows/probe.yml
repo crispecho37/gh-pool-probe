@@ -1,0 +1,14 @@
+name: probe
+on:
+  workflow_dispatch:
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: info
+        run: |
+          echo "runner ok"
+          uname -a
+          nproc
+          free -g | head -2
+          python3 -V
